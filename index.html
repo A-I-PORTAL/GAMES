@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Explorer Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-frame"> <!-- Adding a frame around the game -->
+        <div id="game-image-container">
+            <img id="game-image" src="https://th.bing.com/th/id/OIG4.Y6R.WSvRLhIbyI9lIJum?pid=ImgGn" alt="Game Image" usemap="#image-map">
+            <map name="image-map">
+                <area target="_blank" alt="Light" title="Light" href="https://th.bing.com/th/id/OIG2.hYPdAAsWgqxvEdx22EF3?pid=ImgGn" coords="165,671,218,590" shape="rect" onclick="explore('Light', this.href, event); event.preventDefault();">
+                <area target="_blank" alt="Key" title="Key" href="https://th.bing.com/th/id/OIG4.zw.23DZ90cnHJx84bKrD?pid=ImgGn" coords="34,799,31" shape="circle" onclick="explore('Key', this.href, event); event.preventDefault();">
+                <area target="_blank" alt="Book" title="Book" href="https://th.bing.com/th/id/OIG4.10V.IEk2p15HArPAa5Wa?w=1024&h=1024&rs=1&pid=ImgDetMain" coords="55,911,268,840,266,897,53,979" shape="poly" onclick="explore('Book', this.href, event); event.preventDefault();">
+                <area target="_blank" alt="Star" title="Star" href="https://th.bing.com/th/id/OIG4.0yBDSqd70n1grTSeR3gb?pid=ImgGn" coords="85,148,59" shape="circle" onclick="explore('Star', this.href, event); event.preventDefault();">
+                <area target="_blank" alt="Glass" title="Glass" href="https://th.bing.com/th/id/OIG4.McnBpSWWY4_6_5PAa7as?w=1024&h=1024&rs=1&pid=ImgDetMain" coords="792,232,27" shape="circle" onclick="explore('Glass', this.href, event); event.preventDefault();">
+                <area target="_blank" alt="Treasure" title="Treasure" href="https://th.bing.com/th/id/OIG1.tzRpU44fOeqF2G5HYdZx?w=1024&h=1024&rs=1&pid=ImgDetMain" coords="24,651,90,583" shape="rect" onclick="explore('Treasure', this.href, event); event.preventDefault();">
+            </map>
+        </div>
+    </div>
+    <div id="found-items">
+        <!-- Found item images will be displayed here -->
+    </div>
+    <div id="reset-container">
+        <button id="reset-button" onclick="resetGame()">RESET</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
