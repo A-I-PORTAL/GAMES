@@ -5,7 +5,7 @@ let correctSequence = ['Light', 'Key', 'Book', 'Star', 'Glass', 'Treasure'];
 let foundAreas = {};
 
 // Function to handle player exploration
-function explore(areaName, imageUrl) {
+function explore(areaName, imageUrl, event) {
     playClickSound(); // Play click sound
 
     // Check if the clicked area matches the next expected item in the sequence
@@ -104,7 +104,7 @@ function handleTapEvent(areaName, imageUrl) {
 // Add event listeners for both click and tap events
 document.querySelectorAll('area').forEach(area => {
     area.addEventListener('click', (event) => {
-        explore(area.alt, area.href);
+        explore(area.alt, area.href, event);
         event.preventDefault();
     });
     area.addEventListener('touchstart', (event) => {
