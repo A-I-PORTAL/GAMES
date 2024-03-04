@@ -108,7 +108,7 @@ border: none;
 border-radius: 10px;
 font-family: 'Arial', sans-serif;
 font-size: 16px;
-color: white;
+color: black;
 cursor: pointer;
 }
 
@@ -127,4 +127,22 @@ cursor: pointer;
 -webkit-transform: translate(-50%, -50%);
 -moz-transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
+}
+
+/* Additional CSS for styling the rules section */
+#rules {
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    padding: 20px;
+    margin-bottom: 20px; /* Add space below the rules section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align the text */
+    max-width: 800px; /* Limit the maximum width to prevent stretching */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    width: auto; /* Allow the container to expand to fit the content */
+}
+
+.rules-text {
+    font-size: 24px; /* Adjust font size as needed */
 }
