@@ -95,3 +95,20 @@ function displayOutputAtCenter(message, x, y) {
 function hideOutput() {
     // Your implementation here
 }
+
+// Function to handle tap events on touch devices
+function handleTapEvent(areaName, imageUrl) {
+    explore(areaName, imageUrl);
+}
+
+// Add event listeners for both click and tap events
+document.querySelectorAll('area').forEach(area => {
+    area.addEventListener('click', (event) => {
+        explore(area.alt, area.href);
+        event.preventDefault();
+    });
+    area.addEventListener('touchstart', (event) => {
+        handleTapEvent(area.alt, area.href);
+        event.preventDefault();
+    });
+});
